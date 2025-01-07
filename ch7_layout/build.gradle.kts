@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ch6_view"
+    namespace = "com.example.ch7_layout"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.ch6_view"
+        applicationId = "com.example.ch7_layout"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
