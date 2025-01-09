@@ -1,0 +1,19 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_ch6_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ch6 View 실행" />
+
+    <Button
+        android:id="@+id/btn_ch7_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ch7 Layout 실행" />
+</LinearLayout>
