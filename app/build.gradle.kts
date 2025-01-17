@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.google.gms.google.services) // Google Services 플러그인
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -27,6 +27,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -37,28 +38,15 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // Firebase BOM
-    implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
-
-    // Firebase Firestore
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
     implementation("com.google.firebase:firebase-firestore-ktx")
-
-    // Firebase Authentication
     implementation("com.google.firebase:firebase-auth-ktx")
-
-    // Firebase Cloud Messaging
     implementation("com.google.firebase:firebase-messaging-ktx")
-
-    // Firebase Analytics
     implementation("com.google.firebase:firebase-analytics-ktx")
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }
